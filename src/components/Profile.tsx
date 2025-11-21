@@ -5,14 +5,21 @@ import { MapPin, Mail, Phone, Linkedin, Github, Globe } from "lucide-react";
 
 const Profile = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-muted/30 py-20">
-      <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto border-border/50">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary/10 animate-gradient-shift"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <Card className="max-w-4xl mx-auto border-border/50 backdrop-blur-sm bg-card/95 animate-fade-in">
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Avatar Section */}
               <div className="flex-shrink-0">
-                <Avatar className="w-32 h-32 md:w-40 md:h-40">
+                <Avatar className="w-32 h-32 md:w-40 md:h-40 ring-4 ring-primary/20">
                   <AvatarImage src="/placeholder.svg" alt="Profile" />
                   <AvatarFallback className="text-4xl">JD</AvatarFallback>
                 </Avatar>
