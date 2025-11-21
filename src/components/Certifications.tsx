@@ -1,6 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Calendar, ExternalLink } from "lucide-react";
+import certAws from "@/assets/cert-aws.jpg";
+import certMeta from "@/assets/cert-meta.jpg";
+import certGoogle from "@/assets/cert-google.jpg";
+import certMongodb from "@/assets/cert-mongodb.jpg";
+import certKubernetes from "@/assets/cert-kubernetes.jpg";
+import certNodejs from "@/assets/cert-nodejs.jpg";
+import certDocker from "@/assets/cert-docker.jpg";
+import certTypescript from "@/assets/cert-typescript.jpg";
+import certPostgresql from "@/assets/cert-postgresql.jpg";
 
 const Certifications = () => {
   const certifications = [
@@ -10,7 +19,8 @@ const Certifications = () => {
       date: "2024",
       credentialId: "AWS-SA-PRO-12345",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certAws
     },
     {
       title: "Meta React Developer Professional Certificate",
@@ -18,7 +28,8 @@ const Certifications = () => {
       date: "2024",
       credentialId: "META-REACT-67890",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certMeta
     },
     {
       title: "Google Cloud Professional Developer",
@@ -26,7 +37,8 @@ const Certifications = () => {
       date: "2023",
       credentialId: "GCP-DEV-98765",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certGoogle
     },
     {
       title: "MongoDB Certified Developer Associate",
@@ -34,7 +46,8 @@ const Certifications = () => {
       date: "2023",
       credentialId: "MONGO-DEV-11223",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certMongodb
     },
     {
       title: "Certified Kubernetes Administrator (CKA)",
@@ -42,7 +55,8 @@ const Certifications = () => {
       date: "2023",
       credentialId: "CNCF-CKA-55667",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certKubernetes
     },
     {
       title: "Node.js Application Developer (JSNAD)",
@@ -50,7 +64,8 @@ const Certifications = () => {
       date: "2023",
       credentialId: "OPENJS-JSNAD-44556",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certNodejs
     },
     {
       title: "Docker Certified Associate",
@@ -58,7 +73,8 @@ const Certifications = () => {
       date: "2022",
       credentialId: "DOCKER-DCA-33445",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certDocker
     },
     {
       title: "TypeScript Advanced Programming",
@@ -66,7 +82,8 @@ const Certifications = () => {
       date: "2024",
       credentialId: "MS-TS-ADV-22334",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certTypescript
     },
     {
       title: "PostgreSQL Database Administration",
@@ -74,7 +91,8 @@ const Certifications = () => {
       date: "2023",
       credentialId: "PGSQL-DBA-88990",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: certPostgresql
     }
   ];
 
@@ -88,7 +106,14 @@ const Certifications = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <Card key={index} className="border-border/50 hover:border-primary/50 transition-colors group">
+            <Card key={index} className="border-border/50 hover:border-primary/50 transition-all duration-300 group overflow-hidden">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={cert.image} 
+                  alt={cert.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="p-2 rounded-lg bg-primary/10">
