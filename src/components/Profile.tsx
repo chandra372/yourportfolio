@@ -5,7 +5,7 @@ import { MapPin, Mail, Phone, Linkedin, Github, Globe } from "lucide-react";
 
 const Profile = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="min-h-screen flex items-center justify-center bg-muted/30 py-20">
       <div className="container mx-auto px-4">
         <Card className="max-w-4xl mx-auto border-border/50">
           <CardContent className="p-8">
