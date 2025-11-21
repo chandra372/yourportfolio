@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MapPin, Mail, Phone, Linkedin, Github, Globe } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Profile = () => {
   return (
@@ -20,7 +21,7 @@ const Profile = () => {
               {/* Avatar Section */}
               <div className="flex-shrink-0">
                 <Avatar className="w-32 h-32 md:w-40 md:h-40 ring-4 ring-primary/20">
-                  <AvatarImage src="/placeholder.svg" alt="Profile" />
+                  <AvatarImage src={profilePhoto} alt="Profile" />
                   <AvatarFallback className="text-4xl">JD</AvatarFallback>
                 </Avatar>
               </div>
