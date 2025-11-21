@@ -5,10 +5,18 @@ import { Award, Calendar, ExternalLink } from "lucide-react";
 const Certifications = () => {
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect",
+      title: "AWS Certified Solutions Architect - Professional",
       issuer: "Amazon Web Services",
       date: "2024",
-      credentialId: "AWS-12345-67890",
+      credentialId: "AWS-SA-PRO-12345",
+      status: "Active",
+      link: "#"
+    },
+    {
+      title: "Meta React Developer Professional Certificate",
+      issuer: "Meta",
+      date: "2024",
+      credentialId: "META-REACT-67890",
       status: "Active",
       link: "#"
     },
@@ -16,31 +24,31 @@ const Certifications = () => {
       title: "Google Cloud Professional Developer",
       issuer: "Google Cloud",
       date: "2023",
-      credentialId: "GCP-98765-43210",
+      credentialId: "GCP-DEV-98765",
       status: "Active",
       link: "#"
     },
     {
-      title: "MongoDB Certified Developer",
+      title: "MongoDB Certified Developer Associate",
       issuer: "MongoDB University",
       date: "2023",
-      credentialId: "MONGO-11223-44556",
+      credentialId: "MONGO-DEV-11223",
       status: "Active",
       link: "#"
     },
     {
-      title: "Meta Front-End Developer",
-      issuer: "Meta",
-      date: "2022",
-      credentialId: "META-66778-99001",
-      status: "Active",
-      link: "#"
-    },
-    {
-      title: "Kubernetes Administrator (CKA)",
+      title: "Certified Kubernetes Administrator (CKA)",
       issuer: "Cloud Native Computing Foundation",
       date: "2023",
-      credentialId: "CNCF-55667-88990",
+      credentialId: "CNCF-CKA-55667",
+      status: "Active",
+      link: "#"
+    },
+    {
+      title: "Node.js Application Developer (JSNAD)",
+      issuer: "OpenJS Foundation",
+      date: "2023",
+      credentialId: "OPENJS-JSNAD-44556",
       status: "Active",
       link: "#"
     },
@@ -48,7 +56,23 @@ const Certifications = () => {
       title: "Docker Certified Associate",
       issuer: "Docker",
       date: "2022",
-      credentialId: "DOCKER-33445-66778",
+      credentialId: "DOCKER-DCA-33445",
+      status: "Active",
+      link: "#"
+    },
+    {
+      title: "TypeScript Advanced Programming",
+      issuer: "Microsoft",
+      date: "2024",
+      credentialId: "MS-TS-ADV-22334",
+      status: "Active",
+      link: "#"
+    },
+    {
+      title: "PostgreSQL Database Administration",
+      issuer: "PostgreSQL Global Development Group",
+      date: "2023",
+      credentialId: "PGSQL-DBA-88990",
       status: "Active",
       link: "#"
     }
