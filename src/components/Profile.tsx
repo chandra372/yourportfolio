@@ -46,8 +46,8 @@ const Profile = () => {
         animation: 'pulse 4s ease-in-out infinite'
       }}></div>
       
-      <div className="w-full max-w-5xl bg-card/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 relative z-10 animate-fade-in">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+      <div className="w-full max-w-5xl relative z-10 animate-fade-in">
+        <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
           {/* Avatar Section */}
           <div className="flex-shrink-0">
             <div className="w-48 h-48 rounded-full overflow-hidden ring-8 ring-background shadow-xl">
