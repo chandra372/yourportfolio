@@ -6,12 +6,38 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Profile = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
+    <section className="h-screen w-screen flex items-center justify-center relative overflow-hidden">
+      {/* Multi-layer Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary/10 animate-gradient-shift"></div>
-      <div className="absolute inset-0 opacity-30">
+      
+      {/* Floating Orbs with different animations */}
+      <div className="absolute inset-0 opacity-40">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      {/* Animated geometric shapes */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-32 h-32 border border-primary/30 rounded-lg rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-primary/20 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-40 h-40 border border-primary/25 rounded-lg animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+      </div>
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0 opacity-30">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-primary rounded-full animate-pulse"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
