@@ -4,8 +4,49 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Profile = () => {
   return (
-    <section className="h-screen w-screen flex items-center justify-center bg-muted/30 px-4">
-      <div className="w-full max-w-5xl bg-card rounded-3xl shadow-lg p-8 md:p-12">
+    <section className="h-screen w-screen flex items-center justify-center relative overflow-hidden px-4">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary/5 animate-gradient-shift"></div>
+      
+      {/* Floating Orbs */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      {/* Animated Geometric Shapes */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary rounded-lg rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute bottom-32 right-32 w-24 h-24 border-2 border-primary rounded-full animate-ping" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-40 h-40 border border-primary rounded-lg animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-28 h-28 border-2 border-primary/50 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      </div>
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0 opacity-40">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-primary rounded-full animate-pulse"
+            style={{
+              top: `${10 + (i * 7)}%`,
+              left: `${5 + (i * 8)}%`,
+              animationDelay: `${i * 0.4}s`,
+              animationDuration: `${2 + (i % 3)}s`
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: 'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
+        backgroundSize: '50px 50px',
+        animation: 'pulse 4s ease-in-out infinite'
+      }}></div>
+      
+      <div className="w-full max-w-5xl bg-card/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 relative z-10 animate-fade-in">
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Avatar Section */}
           <div className="flex-shrink-0">
